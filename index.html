@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>にゃん語変換器</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body style="margin-left: 1rem;">
+    <h1>にゃん語変換器</h1>
+
+    <p>入力した言葉をにゃん(猫)言葉に変換してくれます．</p>
+
+    <div style="max-width: 600px;">
+        <input type="text" id="input-text" value="吾輩は猫である。名前はまだ無い。" style="width: 80%;">
+        <input type="submit" onclick="morphologicalSystem()">
+    </div>
+    <p>-- 出力結果 --></p>
+
+    <div id="output-text">吾輩はにゃんであるにゃ。にゃマエはまだにゃい。</div>
+
+    <div style="position: fixed; bottom: 0; width: 100%;">
+        <p style="text-align: left;">開発: <a href="https://momdev.club/" target="_blank"
+                rel="noopener noreferrer">なぞの同人サークル MOM</a>
+            <br>
+            にゃん語変換器のGitHub: 開発協力，バグ報告等は<a href="https://github.com/momerio/nyango-web" target="_blank"
+                rel="noopener noreferrer">こちら</a>から
+        </p>
+        <footer style="text-align: center;">(c) 2022 なぞの同人サークル MoM.</footer>
+    </div>
+
+    <script src="kuromoji.js"></script>
+    <script src="morphological-system.js"></script>
+</body>
+
+</html>
