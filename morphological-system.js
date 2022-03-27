@@ -27,7 +27,7 @@ function translateNyango(tokens) {
     var translated_text = ""; //変換結果
 
     // 猫語辞書
-    nekogo_regex = /ニャ|ナ|ヌ|ネ|サ|ナ|ヤ|ラ|ザ|バ/g;
+    nekogo_regex = /ナ|ヌ|ネ|サ|ナ|ヤ|ラ|ザ|バ/;
 
     tokens.forEach((token) => {
         if ((token.reading == "ヌ" && token.pos == "助動詞")
@@ -43,6 +43,7 @@ function translateNyango(tokens) {
             // 猫語が含まれている場合「にゃ」に変換
             token.reading.split("").forEach((char) => {
                 var temp_char = "";
+                console.log(char, nekogo_regex.test(char));
                 if (nekogo_regex.test(char)) {
                     temp_char = "にゃ";
                 } else {
